@@ -44,4 +44,4 @@ docker run --name honeypush-pg -e POSTGRES_PASSWORD=postgres -e POSTGRES_DB=hone
 
 API base: `http://localhost:8080` — CORS allows `http://localhost:5173` with credentials.
 
-Flyway migration `V1__init.sql` creates the full schema on first start (`spring.jpa.hibernate.ddl-auto=validate`).
+Schema is managed outside the app. Hibernate only validates that entities match the existing tables (`spring.jpa.hibernate.ddl-auto=validate`).
